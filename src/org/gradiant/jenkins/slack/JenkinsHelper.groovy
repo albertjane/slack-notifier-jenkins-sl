@@ -20,6 +20,10 @@ String getAbsoluteUrl() {
     return currentBuild.absoluteUrl
 }
 
+String getBlueUrl() {
+    String[] buildURL = env.BUILD_URL
+    return buildURL.replace("job/${env.JOB_NAME}", "blue/organizations/jenkins/${env.JOB_NAME}/detail/${env.JOB_NAME}")
+}
 
 String getProjectName() {
     if(isMultibranch()) return getMultiBranchProjectName()
