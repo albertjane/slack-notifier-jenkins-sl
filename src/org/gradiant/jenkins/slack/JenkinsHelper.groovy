@@ -20,10 +20,16 @@ String getAbsoluteUrl() {
     return currentBuild.absoluteUrl
 }
 
-String getBlueUrl() {
-    def absoluteBlueUrl = env.RUN_DISPLAY_URL
-    println absoluteBlueUrl
-    return absoluteBlueUrl
+String getBlueChangesUrl() {
+    def blueChangesUrl = env.RUN_CHANGES_DISPLAY_URL
+    println blueChangesUrl
+    return blueChangesUrl
+}
+
+String getBlueResultUrl() {
+    def blueResultUrl = env.RUN_DISPLAY_URL
+    println blueResultUrl
+    return blueResultUrl
 }
 
 String getProjectName() {
