@@ -22,7 +22,8 @@ String getAbsoluteUrl() {
 
 String getBlueUrl() {
     def buildURL = env.BUILD_URL
-    return buildURL.replace("job/${env.JOB_NAME}", "blue/organizations/jenkins/${env.JOB_NAME}/detail/${env.JOB_NAME}")
+    def absoluteBlueUrl = buildURL.replace("job/${env.JOB_NAME}", "blue/organizations/jenkins/${env.JOB_NAME}/detail/${env.JOB_NAME}")
+    return absoluteBlueUrl
 }
 
 String getProjectName() {
