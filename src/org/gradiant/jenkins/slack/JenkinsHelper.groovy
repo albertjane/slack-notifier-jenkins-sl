@@ -22,13 +22,11 @@ String getAbsoluteUrl() {
 
 String getBlueChangesUrl() {
     def blueChangesUrl = env.RUN_CHANGES_DISPLAY_URL
-    println blueChangesUrl
     return blueChangesUrl
 }
 
 String getBlueResultUrl() {
     def blueResultUrl = env.RUN_DISPLAY_URL
-    println blueResultUrl
     return blueResultUrl
 }
 
